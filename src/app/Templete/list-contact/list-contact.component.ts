@@ -30,10 +30,8 @@ export class ListContactComponent {
   }
   eliminar(contacto:Contacto)
   {
-    for(let i=0 ; i<this.listadoContactos.length;i++)
-    {
-      if(this.listadoContactos[i]===contacto)
-      {
+    for(let i=0 ; i<this.listadoContactos.length;i++){
+      if(this.listadoContactos[i]===contacto){
         this.listadoContactos.splice(i,1);
         console.log(this.listadoContactos);
       }
