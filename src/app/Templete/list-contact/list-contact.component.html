@@ -1,0 +1,10 @@
+<h1>Usuarios</h1>
+<span *ngIf="listadoContactos.length==0"><!-- este nos ayuda a determinar si el srraylist esta vacio nos indica que no hay contactos-->
+    No existen contactos
+</span>
+<ul>
+    <li *ngFor="let contacto of listadoContactos">
+        <a (click)="editar(contacto)">{{contacto.nombre}} | {{contacto.Apellido}} </a><!-- el ngfor nos permite listar los contactos del array en la q estan guardados -->
+        <a href="" (click)="eliminar(contacto)">eliminar</a>
+    </li>
+</ul>
