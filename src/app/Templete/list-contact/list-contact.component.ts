@@ -9,6 +9,7 @@ import { ContactoService } from 'src/app/services/contacto.service';
   styleUrls: ['./list-contact.component.scss']
 })
 export class ListContactComponent {
+
   listadoContactos:Contacto[]=[]
   
   constructor(private contactoService: ContactoService,
@@ -29,6 +30,13 @@ export class ListContactComponent {
   }
   eliminar(contacto:Contacto)
   {
-
+    for(let i=0 ; i<this.listadoContactos.length;i++)
+    {
+      if(this.listadoContactos[i]===contacto)
+      {
+        this.listadoContactos.splice(i,1);
+        console.log(this.listadoContactos);
+      }
+    }
   }
 }

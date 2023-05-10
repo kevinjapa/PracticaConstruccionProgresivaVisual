@@ -5,6 +5,6 @@
 <ul>
     <li *ngFor="let contacto of listadoContactos">
         <a (click)="editar(contacto)">{{contacto.nombre}} | {{contacto.Apellido}} </a><!-- el ngfor nos permite listar los contactos del array en la q estan guardados -->
-        <a href="" (click)="eliminar(contacto)">eliminar</a>
+        <a class="eliminar" (click)="eliminar(contacto)"> Eliminar Contacto</a>
     </li>
 </ul>
