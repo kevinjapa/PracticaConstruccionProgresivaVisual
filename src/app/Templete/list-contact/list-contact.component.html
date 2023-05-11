@@ -3,8 +3,29 @@
     No existen contactos
 </span>
 <ul>
+    <table>
+        <thead class="tituloTabla" *ngIf="listadoContactos.length !== 0">
+            <tr >
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Eliminar</td>
+                <td>Actualizar</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contacto of listadoContactos">
+                <td>{{contacto.nombre}}  </td>
+                <td>{{contacto.Apellido}} </td>
+                <td> <a class="eliminar" (click)="eliminar(contacto)"> Eliminar Contacto</a></td>
+                <td> <a class="actualizar" (click)="editar(contacto)"> Actualizar</a> </td>
+            </tr>
+        </tbody>
+	</table>
+</ul>
+
+<!--<ul>
     <li *ngFor="let contacto of listadoContactos">
-        <a (click)="editar(contacto)">{{contacto.nombre}} | {{contacto.Apellido}} </a><!-- el ngfor nos permite listar los contactos del array en la q estan guardados -->
+        <a (click)="editar(contacto)">{{contacto.nombre}} | {{contacto.Apellido}} </a> el ngfor nos permite listar los contactos del array en la q estan guardados 
         <a class="eliminar" (click)="eliminar(contacto)"> Eliminar Contacto</a>
     </li>
-</ul>
+</ul>-->
