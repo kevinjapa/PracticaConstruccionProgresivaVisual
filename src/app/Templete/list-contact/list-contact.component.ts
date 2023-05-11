@@ -26,7 +26,7 @@ export class ListContactComponent {
       }
     };
     console.log(contacto)
-    this.router.navigate(['paginas/contacto'], params)
+    this.router.navigate(['paginas/contactoActualizar'], params)
   }
   eliminar(contacto:Contacto)
   {

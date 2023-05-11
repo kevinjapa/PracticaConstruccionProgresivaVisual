@@ -1,1 +1,14 @@
-<p>actualizar-contacto works!</p>
+<h1>Contacto</h1>
+<div class="form">
+    <label for="Nombre">Nombre: </label>
+    <input id="Nombre"type="text" [(ngModel)]="contacto.nombre">
+    <div class="clearfix"> </div>
+    <label for="">Apellido: </label>
+    <input id="apellido" type="text" [(ngModel)]="contacto.Apellido">
+    <div class="clearfix"> </div>
+    <hr>
+   
+   <button  class="button" (click)="actualizar()">Actualizar</button>
+
+</div>
+        

@@ -1,10 +1,12 @@
 <h1>Contacto</h1>
- <label for="Nombre">Nombre: </label>
- <input id="Nombre"type="text" [(ngModel)]="contacto.nombre">
- <div class="clearfix"> </div>
- <label for="">Apellido: </label>
- <input id="apellido" type="text" [(ngModel)]="contacto.Apellido">
- <div class="clearfix"> </div>
- <hr>
-<button (click)="guardar()">Registrarme</button>
-<button (click)="actualizar()">Actualizar</button>
+<div class="form">
+    <label for="Nombre">Nombre: </label>
+    <input id="Nombre"type="text" [(ngModel)]="contacto.nombre">
+    <div class="clearfix"> </div>
+    <label for="">Apellido: </label>
+    <input id="apellido" type="text" [(ngModel)]="contacto.Apellido">
+    <div class="clearfix"> </div>
+    <hr>
+   <button class="button" (click)="guardar()">Registrarme</button>
+   <!--<button (click)="actualizar()">Actualizar</button>-->
+</div>
