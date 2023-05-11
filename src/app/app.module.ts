@@ -12,6 +12,7 @@ import { EstandaresComponent } from './pages/estandares/estandares.component';
 import { PaguinaswebComponent } from './pages/paguinasweb/paguinasweb.component';
 import { FormsModule } from '@angular/forms';
 import { ListContactComponent } from './Templete/list-contact/list-contact.component';
+import { ActualizarContactoComponent } from './pages/actualizar-contacto/actualizar-contacto.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ListContactComponent } from './Templete/list-contact/list-contact.compo
     InicioComponent,
     EstandaresComponent,
     PaguinaswebComponent,
-    ListContactComponent
+    ListContactComponent,
+    ActualizarContactoComponent
   ],
   imports: [
     BrowserModule,
