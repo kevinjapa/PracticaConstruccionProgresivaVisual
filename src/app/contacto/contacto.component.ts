@@ -31,5 +31,8 @@ export class ContactoComponent {
     this.contactoService.save(this.contacto)//llamamos a la clase creada en el serviciio
     this.contacto = new Contacto();
   }
-
+  actualizar(){
+    console.log(this.contacto)
+    this.contacto = new Contacto();
+  }
 }

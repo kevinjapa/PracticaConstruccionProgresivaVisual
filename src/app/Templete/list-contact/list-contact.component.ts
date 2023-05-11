@@ -24,7 +24,7 @@ export class ListContactComponent {
         contacto: contacto,
         nombre:'Cristian'
       }
-    }
+    };
     console.log(contacto)
     this.router.navigate(['paginas/contacto'], params)
   }
