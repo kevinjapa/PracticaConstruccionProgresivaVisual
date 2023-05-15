@@ -11,6 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ContactoComponent {
   
   name: string='';
+  nombre: string='';
+  apellido: string='';
 
   contacto: Contacto = new Contacto();//para pasar la informacion por un dominidio creamos uno y especificamos las variables
 
@@ -34,5 +36,8 @@ export class ContactoComponent {
   actualizar(){
     console.log(this.contacto)
     this.contacto = new Contacto();
+
+    // Aquí puedes realizar cualquier acción con los datos del formulario, como enviarlos a través de una API
+    console.log(this.nombre, this.apellido);
   }
 }
