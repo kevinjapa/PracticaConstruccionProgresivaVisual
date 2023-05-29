@@ -13,6 +13,13 @@ import { PaguinaswebComponent } from './pages/paguinasweb/paguinasweb.component'
 import { FormsModule } from '@angular/forms';
 import { ListContactComponent } from './Templete/list-contact/list-contact.component';
 import { ActualizarContactoComponent } from './pages/actualizar-contacto/actualizar-contacto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,7 +37,14 @@ import { ActualizarContactoComponent } from './pages/actualizar-contacto/actuali
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatButtonModule,
+    MatNativeDateModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,25 @@
 <h1>Contacto</h1>
-<div class="form">
-    <label for="Nombre">Nombre: </label>
-    <input id="Nombre"type="text" name="nombre" [(ngModel)]="contacto.nombre">
-    <div class="clearfix"> </div>
-    <label for="">Apellido: </label>
-    <input id="apellido" type="text" name="apellido" [(ngModel)]="contacto.Apellido">
-    <div class="clearfix"> </div>
-    <hr>
-   <button class="button" (click)="guardar()">Registrarme</button>
-   <!--<button (click)="actualizar()">Actualizar</button>-->
+
+<div class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Ex. Kevin" value="" [(ngModel)]="contacto.nombre" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="Ex. Japa" value="" [(ngModel)]="contacto.Apellido" required>
+      </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+</div>
+
+<div class="example-button-row">
+  <button mat-fab extended color="accent" (click)="guardar()">
+    <mat-icon>R</mat-icon>
+    Registrar
+  </button>
 </div>
