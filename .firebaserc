@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "contacto62-7e085": {
+      "hosting": {
+        "primerproyecto": [
+          "contacto62-7e085"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "contacto62-7e085"
+  }
+}

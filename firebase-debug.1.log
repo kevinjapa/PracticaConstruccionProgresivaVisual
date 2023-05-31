@@ -1,0 +1,25 @@
+[debug] [2023-05-31T13:39:23.838Z] ----------------------------------------------------------------------
+[debug] [2023-05-31T13:39:23.839Z] Command:       /opt/homebrew/Cellar/node/19.7.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2023-05-31T13:39:23.840Z] CLI Version:   12.2.1
+[debug] [2023-05-31T13:39:23.840Z] Platform:      darwin
+[debug] [2023-05-31T13:39:23.840Z] Node Version:  v19.7.0
+[debug] [2023-05-31T13:39:23.840Z] Time:          Wed May 31 2023 08:39:23 GMT-0500 (hora de Ecuador)
+[debug] [2023-05-31T13:39:23.840Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-31T13:39:23.875Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-31T13:39:23.875Z] > authorizing via signed-in user (japakevin001@gmail.com)
+[debug] [2023-05-31T13:39:23.875Z] [iam] checking project contacto62-7e085 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-31T13:39:23.876Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/contacto62-7e085:testIamPermissions [none]
+[debug] [2023-05-31T13:39:23.876Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/contacto62-7e085:testIamPermissions x-goog-quota-user=projects/contacto62-7e085
+[debug] [2023-05-31T13:39:23.876Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/contacto62-7e085:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-31T13:39:24.701Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/contacto62-7e085:testIamPermissions 200
+[debug] [2023-05-31T13:39:24.702Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/contacto62-7e085:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-31T13:39:24.703Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/contacto62-7e085 [none]
+[debug] [2023-05-31T13:39:25.411Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/contacto62-7e085 200
+[debug] [2023-05-31T13:39:25.411Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/contacto62-7e085 {"projectId":"contacto62-7e085","projectNumber":"1054445271227","displayName":"Contacto62","name":"projects/contacto62-7e085","resources":{"hostingSite":"contacto62-7e085"},"state":"ACTIVE","etag":"1_da28395e-3469-4dc0-b962-f7838298d2ce"}
+[debug] [2023-05-31T13:39:26.841Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/contacto62-7e085/sites pageToken=&pageSize=10
+[debug] [2023-05-31T13:39:27.809Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/contacto62-7e085/sites 200
+[debug] [2023-05-31T13:39:27.809Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/contacto62-7e085/sites {"sites":[{"name":"projects/contacto62-7e085/sites/contacto62-7e085","defaultUrl":"https://contacto62-7e085.web.app","appId":"1:1054445271227:web:253937c817b77c412a919e","type":"DEFAULT_SITE"}]}
+[debug] [2023-05-31T13:39:27.811Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1054445271227:web:253937c817b77c412a919e/config [none]
+[debug] [2023-05-31T13:39:28.364Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1054445271227:web:253937c817b77c412a919e/config 200
+[debug] [2023-05-31T13:39:28.364Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1054445271227:web:253937c817b77c412a919e/config {"projectId":"contacto62-7e085","appId":"1:1054445271227:web:253937c817b77c412a919e","storageBucket":"contacto62-7e085.appspot.com","apiKey":"AIzaSyAxBkvJaeRGUkBYiDnig1PEogfG767Ytkg","authDomain":"contacto62-7e085.firebaseapp.com","messagingSenderId":"1054445271227"}
