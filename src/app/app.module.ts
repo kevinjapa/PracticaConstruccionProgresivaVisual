@@ -25,6 +25,8 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { ListadoProductosComponent } from './pages/listado-productos/listado-productos.component';
+import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
 
 
 
@@ -40,7 +42,9 @@ import { ProductoComponent } from './pages/producto/producto.component';
     PaguinaswebComponent,
     ListContactComponent,
     ActualizarContactoComponent,
-    ProductoComponent
+    ProductoComponent,
+    ListadoProductosComponent,
+    ModificarProductoComponent
   ],
   imports: [
     BrowserModule,

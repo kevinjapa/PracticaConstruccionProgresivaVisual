@@ -2,13 +2,13 @@
 <br>
 <div class="form">
     <label for="">Nombre del Producto</label>
-    <input type="text">
+    <input type="text" [(ngModel)]="producto.nombre">
     <br>
     <label for="">Descripcion</label>
-    <input type="text" name="" id="">
+    <input type="text" name="" id="" [(ngModel)]="producto.descripcion">
     <br>
     <label for="">Precio</label>
-    <input type="text">
+    <input type="text" [(ngModel)]="producto.precio">
     <br>
-    <button>Agregar</button>
+    <button (click)="guardar()">Agregar</button>
 </div>
