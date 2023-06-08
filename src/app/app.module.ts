@@ -27,7 +27,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { ListadoProductosComponent } from './pages/listado-productos/listado-productos.component';
 import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
-
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -57,6 +57,7 @@ import { ModificarProductoComponent } from './pages/modificar-producto/modificar
     MatButtonModule,
     MatNativeDateModule,
     MatIconModule,
+    MatMenuModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
   ],
