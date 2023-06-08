@@ -11,28 +11,19 @@ import { ListadoProductosComponent } from '../listado-productos/listado-producto
 })
 export class ActualizarContactoComponent {
     
-  name: string='';
+contacto:Contacto=new Contacto();
 
-  contacto: Contacto = new Contacto();//para pasar la informacion por un dominidio creamos uno y especificamos las variables
-  listadoContactosFire:any;//firebase
-
-  constructor(private contactoService: ContactoService,//llamamos a nuestro servicio creado por nosotros y le decimos q es de tipos contactoServicio
-  private router:Router)
-  {
-    this.listadoContactosFire=contactoService.getAll();////firebase
-
+constructor(private contactoService:ContactoService,
+  private router:Router){
     let params=this.router.getCurrentNavigation()?.extras.queryParams;
-    if(params)
-    {
+    if(params){
       console.log(params)
-      this.contacto=new Contacto()
-      this.contacto=params['contacto']
+        this.contacto=new Contacto();
+        this.contacto=params['contacto']
+      }
+    }
+    actualizar(){
+      this.contactoService.update(this.contacto.uid,this.contacto);
+      this.router.navigate(["paginas/listUsuarios"])
     }
   }
-  guardar(){
-    console.log(this.contacto)
-    this.contactoService.save(this.contacto)//llamamos a la clase creada en el serviciio
-    this.contacto = new Contacto();
-  }
-  
-}

@@ -28,7 +28,7 @@ export class ListContactComponent {
     console.log("editar "+contacto)
     let params: NavigationExtras = {
       queryParams:{
-        productToEdit: contacto,
+        contacto:contacto,
       }
     }
     this.router.navigate(["paginas/contactoActualizar"], params)/////redireccion 

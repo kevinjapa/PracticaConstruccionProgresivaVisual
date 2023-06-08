@@ -1,46 +1,50 @@
 /* Estilos generales del formulario */
 h1{
     text-align: center;
-
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-.form {
-    width: 400px;
-    margin: 0 auto;
-  }
-  
-  /* Estilos para los campos de entrada */
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Estilo para las etiquetas de los campos */
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  /* Estilos para el botón de envío */
-  input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  
+/* Estilos generales del formulario */
+.formulario {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* Estilos de los campos de entrada */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Estilos iniciales del botón */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos al pasar el cursor por encima del botón */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos cuando se presiona el botón */
+button:active {
+  background-color: #3e8e41;
+}
+
+/* Estilos cuando el botón está enfocado */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4CAF50;
+}
+
+
