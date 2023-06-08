@@ -16,6 +16,8 @@ export class ContactoComponent {
 
   contacto: Contacto = new Contacto();//para pasar la informacion por un dominidio creamos uno y especificamos las variables
 
+  contactoFire:any;
+
   constructor(private contactoService: ContactoService,//llamamos a nuestro servicio creado por nosotros y le decimos q es de tipos contactoServicio
   private router:Router)
   {
@@ -28,11 +30,12 @@ export class ContactoComponent {
       this.contacto=params['contacto']
     }
   }
-  guardar(){
+  guardar(){ //fire actualizado
     console.log(this.contacto)
     this.contactoService.save(this.contacto)//llamamos a la clase creada en el serviciio
     this.contacto = new Contacto();
   }
+
   actualizar(){
     console.log(this.contacto)
     this.contacto = new Contacto();

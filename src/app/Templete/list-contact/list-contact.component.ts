@@ -10,15 +10,19 @@ import { ContactoService } from 'src/app/services/contacto.service';
 })
 export class ListContactComponent {
 
-  listadoContactos:Contacto[]=[]
+  listadoContactos:Contacto[]=[];
+  listadoContactosFire:any;//firebase
   
   constructor(private contactoService: ContactoService,
     private router:Router){
     this.listadoContactos=contactoService.getList()
     console.log('Listado de Contactos',this.listadoContactos)
+
+    this.listadoContactosFire=contactoService.getAll()//firebase
   }
   editar(contacto: Contacto)
   {
+    this.contactoService.update(contacto.nombre,contacto.Apellido,)
     let params:NavigationExtras={
       queryParams:{
         contacto: contacto,
@@ -30,11 +34,6 @@ export class ListContactComponent {
   }
   eliminar(contacto:Contacto)
   {
-    for(let i=0 ; i<this.listadoContactos.length;i++){
-      if(this.listadoContactos[i]===contacto){
-        this.listadoContactos.splice(i,1);
-        console.log(this.listadoContactos);
-      }
-    }
+    this.contactoService.delete(contacto.uid);
   }
 }

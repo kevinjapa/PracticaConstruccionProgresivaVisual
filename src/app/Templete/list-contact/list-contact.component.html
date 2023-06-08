@@ -1,5 +1,5 @@
 <h1>Usuarios</h1>
-<span *ngIf="listadoContactos.length==0"><!-- este nos ayuda a determinar si el srraylist esta vacio nos indica que no hay contactos-->
+<span *ngIf="listadoContactosFire.length==0"><!-- este nos ayuda a determinar si el srraylist esta vacio nos indica que no hay contactos-->
     No existen contactos
 </span>
 <script>
@@ -11,7 +11,7 @@
   </script>
 <ul>
     <table>
-        <thead class="tituloTabla" *ngIf="listadoContactos.length !== 0">
+        <thead class="tituloTabla" *ngIf="listadoContactosFire.length !== 0">
             <tr >
                 <td>Nro.</td>
                 <td>Nombre</td>
@@ -21,7 +21,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let contacto of listadoContactos"
+            <tr *ngFor="let contacto of listadoContactosFire | async"
             >
                 <td>{{listadoContactos.length}}</td>
                 <td>{{contacto.nombre}}  </td>

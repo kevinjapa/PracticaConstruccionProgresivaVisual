@@ -6,6 +6,7 @@ import { PaguinaswebComponent } from './pages/paguinasweb/paguinasweb.component'
 import { ListContactComponent } from './Templete/list-contact/list-contact.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ActualizarContactoComponent } from './pages/actualizar-contacto/actualizar-contacto.component';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/inicio', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:"paginas/paginasweb",component:PaguinaswebComponent},
   {path:"paginas/listUsuarios",component:ListContactComponent},
   {path:"paginas/contacto",component:ContactoComponent},
-  {path:"paginas/contactoActualizar",component:ActualizarContactoComponent}
+  {path:"paginas/contactoActualizar",component:ActualizarContactoComponent},
+  {path:"paginas/Producto", component:ProductoComponent} 
 ];
 
 @NgModule({
