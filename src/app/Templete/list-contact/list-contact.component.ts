@@ -20,20 +20,17 @@ export class ListContactComponent {
 
     this.listadoContactosFire=contactoService.getAll()//firebase
   }
-  editar(contacto: Contacto)
-  {
-    this.contactoService.update(contacto.nombre,contacto.Apellido,)
-    let params:NavigationExtras={
-      queryParams:{
-        contacto: contacto,
-        nombre:'Cristian'
-      }
-    };
-    console.log(contacto)
-    this.router.navigate(['paginas/contactoActualizar'], params)
-  }
   eliminar(contacto:Contacto)
   {
     this.contactoService.delete(contacto.uid);
+  }
+  editar(contacto: Contacto){
+    console.log("editar "+contacto)
+    let params: NavigationExtras = {
+      queryParams:{
+        productToEdit: contacto,
+      }
+    }
+    this.router.navigate(["paginas/contactoActualizar"], params)/////redireccion 
   }
 }

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Contacto } from 'src/app/domain/contacto';
 import { ContactoService } from 'src/app/services/contacto.service';
+import { ListadoProductosComponent } from '../listado-productos/listado-productos.component';
 
 @Component({
   selector: 'app-actualizar-contacto',
@@ -13,10 +14,12 @@ export class ActualizarContactoComponent {
   name: string='';
 
   contacto: Contacto = new Contacto();//para pasar la informacion por un dominidio creamos uno y especificamos las variables
+  listadoContactosFire:any;//firebase
 
   constructor(private contactoService: ContactoService,//llamamos a nuestro servicio creado por nosotros y le decimos q es de tipos contactoServicio
   private router:Router)
   {
+    this.listadoContactosFire=contactoService.getAll();////firebase
 
     let params=this.router.getCurrentNavigation()?.extras.queryParams;
     if(params)
@@ -31,8 +34,5 @@ export class ActualizarContactoComponent {
     this.contactoService.save(this.contacto)//llamamos a la clase creada en el serviciio
     this.contacto = new Contacto();
   }
-  actualizar(){
-    console.log(this.contacto)
-    this.contacto = new Contacto();
-  }
+  
 }

@@ -25,14 +25,14 @@ export class ListadoProductosComponent {
     this.productoService.delete(producto.uid)
 
   }
-  edit(producto: Producto){
+  editar(producto: Producto){
     console.log("editar "+producto)
     let params: NavigationExtras = {
       queryParams:{
-        productToEdit: producto,
+        producto:producto,
       }
     }
-    this.router.navigate(['pages/productedit'], params)/////redireccion 
+    this.router.navigate(["paginas/modificarProducto"], params)/////redireccion 
 }
 
 }

@@ -18,7 +18,7 @@
                 <td>{{producto.descripcion}} </td>
                 <td>{{producto.precio}}</td>
                 <td> <a class="eliminar" (click)="eliminar(producto)">Eliminar</a></td>
-                <td><a class="modificar " >Modificar</a></td>
+                <td><a class="actualizar " (click)="editar(producto)">Modificar</a></td>
             </tr>
         </tbody>
 	</table>

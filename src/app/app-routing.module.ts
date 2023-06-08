@@ -8,6 +8,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { ActualizarContactoComponent } from './pages/actualizar-contacto/actualizar-contacto.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { ListadoProductosComponent } from './pages/listado-productos/listado-productos.component';
+import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paginas/inicio', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"paginas/contacto",component:ContactoComponent},
   {path:"paginas/contactoActualizar",component:ActualizarContactoComponent},
   {path:"paginas/Producto", component:ProductoComponent},
-  {path:"paginas/listaProducto", component:ListadoProductosComponent}
+  {path:"paginas/listaProducto", component:ListadoProductosComponent},
+  {path:"paginas/modificarProducto",component:ModificarProductoComponent}
 ];
 
 @NgModule({
