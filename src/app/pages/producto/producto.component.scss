@@ -10,23 +10,6 @@ body{
   text-align: center;
   color: rgb(183, 136, 234);
 }
-
-.formulario {
-  width: 400px;
-  margin: 0 auto;
-}
-
-/* Estilos de los campos de entrada */
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-/* Estilos iniciales del botón */
 button {
   padding: 10px 20px;
   background-color: #4CAF50;
