@@ -28,7 +28,7 @@ import { ProductoComponent } from './pages/producto/producto.component';
 import { ListadoProductosComponent } from './pages/listado-productos/listado-productos.component';
 import { ModificarProductoComponent } from './pages/modificar-producto/modificar-producto.component';
 import {MatMenuModule} from '@angular/material/menu';
-
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,11 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     MatNativeDateModule,
     MatIconModule,
+    
     MatMenuModule,
+
+    HttpClientModule,
+
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
   ],
