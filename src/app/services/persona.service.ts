@@ -16,7 +16,16 @@ export class PersonaService {
     
   }
 
+  update(contacto:Contacto){
+    return this.http.post<any>("http://localhost:8080/demo/rs/clientes",contacto)
+    
+  }
+
   getAll(){
     return this.http.get<any>("http://localhost:8080/demo/rs/clientes/all")
+  }
+
+  delete(contacto: Contacto){
+    return this.http.delete<any>("http://localhost:8080/demo/rs/clientes/clientes/contacto.idCliente")
   }
 }

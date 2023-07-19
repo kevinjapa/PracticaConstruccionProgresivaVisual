@@ -36,7 +36,9 @@ export class ListContactComponent implements OnInit{
 
   eliminar(contacto:Contacto)
   {
-    this.contactoService.delete(contacto.uid);
+    // this.contactoService.delete(contacto.uid);
+    this.personaService.delete(contacto);
+    console.log(contacto);
   }
 
   editar(contacto: Contacto){
@@ -49,17 +51,4 @@ export class ListContactComponent implements OnInit{
     this.router.navigate(["paginas/contactoActualizar"], params)/////redireccion 
   }
   
-
-  guardar(){ //fire actualizado
-    console.log(this.contacto)
-    //this.contactoService.save(this.contacto)//llamamos a la clase creada en el serviciio,, es era el codigo para realizar la conexionmmediante la fierbase
-    //this.contacto = new Contacto();
-
-    //codigo para guardar en la base de datos
-    this.personaService.save(this.contacto).subscribe(data => {
-      console.log("Resultado WS SAVE", data);
-    });
-    this.contacto=new Contacto()
-  }
-
 }
