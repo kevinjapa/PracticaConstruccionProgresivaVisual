@@ -17,6 +17,6 @@ export class PersonaService {
   }
 
   getAll(){
-    return this.http.get<any>("http://localhost:8080/demo/rs/clientes/clienteslista")
+    return this.http.get<any>("http://localhost:8080/demo/rs/clientes/all")
   }
 }
