@@ -26,6 +26,6 @@ export class PersonaService {
   }
 
   delete(contacto: Contacto){
-    return this.http.delete<any>("http://localhost:8080/demo/rs/clientes/clientes/contacto.idCliente")
+    return this.http.delete("http://localhost:8080/demo/rs/clientes/delete/"+contacto.idCliente)
   }
 }

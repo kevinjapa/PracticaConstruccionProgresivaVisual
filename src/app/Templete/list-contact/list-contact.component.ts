@@ -37,8 +37,11 @@ export class ListContactComponent implements OnInit{
   eliminar(contacto:Contacto)
   {
     // this.contactoService.delete(contacto.uid);
-    this.personaService.delete(contacto);
+    this.personaService.delete(contacto).subscribe(
+    ()=> console.log("cliente eliminado de manera correcta de la paguina web y de la base de datos de esta servicio")
+    );
     console.log(contacto);
+    this.reloadPage();
   }
 
   editar(contacto: Contacto){
@@ -51,4 +54,13 @@ export class ListContactComponent implements OnInit{
     this.router.navigate(["paginas/contactoActualizar"], params)/////redireccion 
   }
   
+
+  reloadPage(){
+    let currentUrl = this.router.url
+    this.router.navigateByUrl("/", {skipLocationChange: true}).then(
+      () =>{
+        this.router.navigate([currentUrl])
+      }
+    )
+   }
 }
