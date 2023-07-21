@@ -37,8 +37,17 @@ constructor(private contactoService:ContactoService,
       //codigo para guardar en la base de datos
       this.personaService.update(this.contacto).subscribe(data => {
         console.log("Resultado WS SAVE", data);
+        this.router.navigate(["paginas/listUsuarios"])
       });
-      //this.contacto=new Contacto()
-      this.router.navigate(["paginas/listUsuarios"])
+      this.contacto=new Contacto()
     }
+
+    reloadPage(){
+      let currentUrl = this.router.url
+      this.router.navigateByUrl("/", {skipLocationChange: true}).then(
+        () =>{
+          this.router.navigate([currentUrl])
+        }
+      )
+     }
   }

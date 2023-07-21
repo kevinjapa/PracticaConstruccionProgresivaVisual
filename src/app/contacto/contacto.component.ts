@@ -32,12 +32,19 @@ export class ContactoComponent {
     console.log(this.contacto)
     //this.contactoService.save(this.contacto)//llamamos a la clase creada en el serviciio,, es era el codigo para realizar la conexionmmediante la fierbase
     //this.contacto = new Contacto();
-
     //codigo para guardar en la base de datos
-    this.personaService.save(this.contacto).subscribe(data => {
-      console.log("Resultado WS SAVE", data);
-    });
-    this.contacto=new Contacto()
+    if(!isNaN(Number(this.contacto.cedula)) && this.contacto.cedula.length === 10){
+
+      this.personaService.save(this.contacto).subscribe(data => {
+        console.log("Resultado WS SAVE", data);
+        this.router.navigate(["paginas/listUsuarios"])
+      });
+      this.contacto=new Contacto()
+      this.router.navigate(["paginas/listUsuarios"])
+    }
+    else{
+      alert("Nro. Cedula Incorreta")
+    }
   }
 
   actualizar(){
@@ -47,5 +54,21 @@ export class ContactoComponent {
     // Aquí puedes realizar cualquier acción con los datos del formulario, como enviarlos a través de una API
   
   }
+
+  modificar(){ //fire actualizado
+    console.log(this.contacto)
+
+    if(!isNaN(Number(this.contacto.cedula)) && this.contacto.cedula.length === 10){
+      this.personaService.save(this.contacto).subscribe(data => {
+        console.log("Resultado WS SAVE", data);
+        this.router.navigate(["paginas/listUsuarios"])
+      });
+      this.contacto=new Contacto()
+    }
+    else{
+      alert("Erro Nro. Cedula Incorrecta")
+    }
+  }
+  
 
 }

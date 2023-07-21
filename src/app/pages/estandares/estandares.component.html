@@ -1,7 +1,27 @@
-<h1>Estandares Web</h1>
-<p>
-    Los "estantes web" son una metáfora utilizada para describir una forma de organizar el contenido en un sitio web. La idea es que los diferentes tipos de contenido (por ejemplo, artículos, videos, imágenes, productos, etc.) se pueden organizar como si estuvieran en estantes separados en una biblioteca o tienda.
-    
-    Cada "estante" en el sitio web se etiqueta con una categoría o tema específico, lo que permite a los usuarios navegar fácilmente por el contenido que les interesa. Por ejemplo, en un sitio web de comercio electrónico, los productos se pueden organizar en estantes según su categoría (ropa, electrónica, hogar, etc.) o según su función (ropa de invierno, dispositivos móviles, electrodomésticos, etc.).
-    
-    Los estantes web son una forma útil de organizar grandes cantidades de contenido en un sitio web y ayudar a los usuarios a encontrar lo que están buscando de manera más eficiente. Además, los estantes web también pueden proporcionar una experiencia visual atractiva y coherente en el sitio web.</p>
+<h1>Contacto</h1>
+
+<div class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Ex. Kevin" value="" [(ngModel)]="contacto.nombre" required>
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Apellido</mat-label>
+        <input matInput placeholder="Ex. Japa" value="" [(ngModel)]="contacto.apellido" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Cedula</mat-label>
+        <input matInput placeholder="999999999" value="" [(ngModel)]="contacto.cedula" required>
+      </mat-form-field>
+</div>
+
+<div class="example-button-row">
+  <button mat-fab extended color="accent" (click)="guardar()">
+    <mat-icon>G</mat-icon>
+    Registrar
+  </button>
+</div>

@@ -27,10 +27,11 @@ export class ListContactComponent implements OnInit{
 
     this.listadoContactosFire=contactoService.getAll()//firebase
     this.listadoContactosWS=personaService.getAll()
+
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.listadoContactosWS=this.personaService.getAll()
   }
 
 
@@ -38,10 +39,12 @@ export class ListContactComponent implements OnInit{
   {
     // this.contactoService.delete(contacto.uid);
     this.personaService.delete(contacto).subscribe(
-    ()=> console.log("cliente eliminado de manera correcta de la paguina web y de la base de datos de esta servicio")
+    ()=>{console.log("cliente eliminado de manera correcta de la paguina web y de la base de datos de esta servicio")
+    this.ngOnInit()} 
     );
     console.log(contacto);
-    this.reloadPage();
+
+    // this.reloadPage();
   }
 
   editar(contacto: Contacto){

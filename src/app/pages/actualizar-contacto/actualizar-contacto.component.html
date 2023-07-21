@@ -1,7 +1,8 @@
 <h1>Contacto</h1>
 <div class="form">
-    <input id="Nombre"type="text" [(ngModel)]="contacto.idCliente">
-    <div class="clearfix"> </div>
+    <!-- <input id="Nombre"type="text" [(ngModel)]="contacto.idCliente"[disabled]="true"> -->
+    <label for="Nombre">Cedula: </label>
+    <input id="Nombre"type="text" [(ngModel)]="contacto.cedula"[disabled]="true">
     <div class="clearfix"> </div>
     <label for="Nombre">Nombre: </label>
     <input id="Nombre"type="text" [(ngModel)]="contacto.nombre">
